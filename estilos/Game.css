@@ -1,5 +1,5 @@
 body{
-    height:700px;
+    height:450px;
     place-items: center;
     display: grid;
     background: linear-gradient(90deg, rgba(161,68,214,1) 0%, rgba(244,8,208,1) 54%, rgba(0,212,255,1) 100%);
@@ -15,7 +15,7 @@ h1{
     font-weight: 50; 
 }
 footer p{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 200;
     border-bottom:solid white 2px;
 }
@@ -35,11 +35,13 @@ main{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap:5px;
+    gap:10px 10px;
     border-radius: 10px;
 }
 button{
-    color: white;
+    border:none;
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(26, 24, 24);
     font-size: 40px;
 }
 .section2{ padding: 10px;
