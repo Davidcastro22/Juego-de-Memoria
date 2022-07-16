@@ -26,7 +26,6 @@ let numeros= [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 // math es una funcion, regresa numeros aleatorios positivos
 // se coloca parametro "-0.5" para que regrese nuemros negativos
 numeros= numeros.sort(()=>{return Math.random()-0.5});
-console.log(numeros);
 
 // funciones
 
@@ -56,7 +55,7 @@ function contarTiempo(){
 function endGame(){
     for(let i=0; i<=15; i++){
         let finJuego=document.getElementById(i);
-        finJuego.innerHTML=`<img src="/estilos/img/${numeros[i]}.png" alt="">`;;
+        finJuego.innerHTML=`<img src="./estilos/img/${numeros[i]}.png" alt="">`;;
         finJuego.disabled=true;
     }
 }
@@ -84,14 +83,14 @@ function destapar(id){
     tarjeta1=document.getElementById(id);
     // mostar valor de botones en el html
     primerResultado=numeros[id];
-    tarjeta1.innerHTML= `<img src="/estilos/img/${primerResultado}.png" alt="">`;
+    tarjeta1.innerHTML= `<img src="./estilos/img/${primerResultado}.png" alt="">`;
     // desabilitar el primer boton presionado
     tarjeta1.disabled=true;
    }else if(tarjetasDestapadas==2){
 // mostrar segunda tarjeta
 tarjeta2=document.getElementById(id);
 segundoResultado=numeros[id];
-tarjeta2.innerHTML= `<img src="/estilos/img/${segundoResultado}.png" alt="">`;
+tarjeta2.innerHTML= `<img src="./estilos/img/${segundoResultado}.png" alt="">`;
 //    desabilitar segundo boton
 tarjeta2.disabled=true;
 // aumentar movimientos
@@ -119,14 +118,10 @@ if(primerResultado==segundoResultado){
         fallaste.innerHTML="Felicidades";
         fallaste.style.color="yellow";
         fallaste.style.display="grid";
-        
-        
     }
-}
-
-    else{
+}else{
     // mostrar valores y volve a tapar
-    setTimeout(()=>{
+     setTimeout(()=>{
         tarjeta1.innerHTML='';
         tarjeta2.innerHTML='';
         tarjeta1.disabled=false;
