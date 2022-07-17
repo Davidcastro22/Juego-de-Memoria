@@ -1,3 +1,17 @@
+// Musica Fondo
+let audio = new Audio('./estilos/audios/principal.mp3');
+setInterval(()=>{
+    audio.play();
+}, 1000)
+
+// intro
+function entrar(){
+    setTimeout(() => {
+        intro.style.display="none";
+    }, 300);
+}
+
+
 // Inicializacion de variables
 let tarjetasDestapadas=0;
 let tarjeta1= null;
@@ -11,15 +25,13 @@ let timerInical=30;
 let timer=30;
 let tiempoRegresivo=null;
 
-// sonidos
-
-
 // apuntando al documento html
 let mostrarMovimientos= document.getElementById("movimientos");
 let mostrarAciertos= document.getElementById("aciertos");
 let MostrarTiempo=document.getElementById("time");
 let fallaste=document.getElementById("fallaste");
 let jugarDeNuevo=document.getElementById("reintentar");
+let intro=document.getElementById("intro");
 // numeros aleatorios
 let numeros= [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 // funccion "sort" ordena numeros de acuerdo a una funcion
@@ -28,10 +40,6 @@ let numeros= [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
 numeros= numeros.sort(()=>{return Math.random()-0.5});
 
 // funciones
-
-
-
-
 // tiempo regresivo
 function contarTiempo(){
   tiempoRegresivo=  setInterval(() => {
@@ -55,29 +63,18 @@ function contarTiempo(){
 function endGame(){
     for(let i=0; i<=15; i++){
         let finJuego=document.getElementById(i);
-        finJuego.innerHTML=`<img src="./estilos/img/${numeros[i]}.png" alt="">`;;
+        finJuego.innerHTML=`<img src="./estilos/img/${numeros[i]}.png" alt="">`;
         finJuego.disabled=true;
     }
 }
-
-// iniciar juego otra vez
-
-
-
-
-
 // funcion principal
 // al precionar un boton se activa esta funcion que tiene vinculado en el html
 function destapar(id){
-
-
    if(temporizador== false){
     contarTiempo();
     temporizador=true;
    }
-
    tarjetasDestapadas++;
-
    if(tarjetasDestapadas==1){
     // mostrar el primer tarjeta
     tarjeta1=document.getElementById(id);
