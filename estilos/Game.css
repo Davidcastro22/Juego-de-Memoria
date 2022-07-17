@@ -87,4 +87,42 @@ button{
 img{
     width:100%;
 }
+#intro{
+    position:absolute;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255,255,255,0.1);
+    height:600px;
+    width: 100%;
+}
+#intro img{
+    margin-top:13px;
+    width:50px;
+    height: 50px;
+}
+#intro h2{
+    text-shadow:5px 5px 5px yellow;
+
+    font-family: mario;
+    color:black;
+    box-shadow: i;
+    font-weight:bolder;
+
+}
+#intro button{
+    box-shadow: 20px 20px 20px black;
+    color:red;
+    border-radius: 20px;
+    background-color: gold;
+    width:40%;
+    transition: 0.3s;
+}
+#intro button:hover{
+    color: rgb(56, 56, 255);
+    font-size: 60px
+}
+
 
